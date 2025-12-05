@@ -15,6 +15,6 @@ reading := fmt.Sprintf()
 return reading
 }
 func calc(int, float64,float64) float64{
-
+	
 	
 }
