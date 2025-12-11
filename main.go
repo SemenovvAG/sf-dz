@@ -10,9 +10,11 @@ func main() {
 
 }
 func reading() (int, string, string) {
+
 	var userInput int
 	var from string
 	var in string
+
 	fmt.Println("=Калькулятор курса валют=")
 	fmt.Print("Введите количество: ")
 	fmt.Scan(&userInput)
@@ -26,6 +28,7 @@ func reading() (int, string, string) {
 }
 
 func calculateImp(userInput int, from string, in string) float64 {
+
 	var result float64
 	courseUsd := 76.1
 	courseEuro := 86.3
