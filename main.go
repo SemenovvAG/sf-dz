@@ -3,10 +3,16 @@ package main
 import "fmt"
 
 func main() {
-
+for {
 	userInput, from, in := reading()
 	result := calculateImp(userInput, from, in)
 	fmt.Println(result)
+	isRepeatCalculation := checkRepeatCalculate()
+	if !isRepeatCalculation {
+		break
+	}
+}
+	
 
 }
 func reading() (int, string, string) {
@@ -41,4 +47,13 @@ func calculateImp(userInput int, from string, in string) float64 {
 		fmt.Println("Неправильно введена валюта")
 	}
 	return result
+}
+func checkRepeatCalculate() bool {
+	var userChoise string
+	fmt.Print("Вы хотите сделать еще расчет (y/n): ")
+	fmt.Scan(&userChoise)
+	if userChoise == "y" || userChoise == "Y" {
+		return true
+	}
+	return false
 }
