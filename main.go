@@ -3,16 +3,15 @@ package main
 import "fmt"
 
 func main() {
-for {
-	userInput, from, in := reading()
-	result := calculateImp(userInput, from, in)
-	fmt.Println(result)
-	isRepeatCalculation := checkRepeatCalculate()
-	if !isRepeatCalculation {
-		break
+	for {
+		userInput, from, in := reading()
+		result := calculateImp(userInput, from, in)
+		fmt.Println(result)
+		isRepeatCalculation := checkRepeatCalculate()
+		if !isRepeatCalculation {
+			break
+		}
 	}
-}
-	
 
 }
 func reading() (int, string, string) {
